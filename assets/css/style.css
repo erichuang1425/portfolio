@@ -1,22 +1,24 @@
 
 :root {
-    --primary-color: #2c3e50;
-    --secondary-color: #f0f0f0;
+    --bg-color: #ffffff;
+    --text-color: #2c3e50;
     --accent-color: #ff6347;
+    --primary-color: var(--text-color);
+    --secondary-color: #f0f0f0;
 
     /* Font families */
     --font-heading: 'Playfair Display', 'Times New Roman', serif;
     --font-body: 'Inter', 'Roboto', Arial, Helvetica, sans-serif;
 
     /* Base font sizes */
-    --font-size-base: 16px;
+    --font-size-base: 1rem;
     --font-size-lg: 1.5rem;
     --font-size-xl: 2rem;
 
     /* Spacing scale */
-    --spacing-unit: 10px;
-    --spacing-md: 20px;
-    --spacing-lg: 40px;
+    --spacing-unit: 0.625rem;
+    --spacing-md: 1.25rem;
+    --spacing-lg: 2.5rem;
 }
 
 html {
@@ -27,13 +29,27 @@ body {
     font-family: var(--font-body);
     margin: 0;
     padding: 0;
-    line-height: 1.6;
+    line-height: 1.5;
     font-size: var(--font-size-base);
-    color: var(--primary-color);
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
 
 h1, h2, h3 {
     font-family: var(--font-heading);
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: var(--font-size-xl);
+}
+
+h2 {
+    font-size: var(--font-size-lg);
+}
+
+h3 {
+    font-size: 1.25rem;
 }
 
 header {
@@ -93,7 +109,7 @@ nav a:hover {
 }
 
 h1, h2, h3 {
-    color: var(--primary-color);
+    color: var(--text-color);
 }
 
 a {
@@ -132,7 +148,7 @@ section:nth-of-type(odd) {
 
 .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(15.625rem, 1fr));
     column-gap: var(--spacing-md);
     row-gap: var(--spacing-md);
 }
@@ -151,7 +167,7 @@ section:nth-of-type(odd) {
 
 .gallery-item img {
     display: block;
-    max-width: 200px;
+    max-width: 12.5rem;
 }
 
 .gallery-item a {
@@ -160,7 +176,7 @@ section:nth-of-type(odd) {
 }
 
 .gallery-item h4 {
-    margin: 5px 0 0;
+    margin: 0.3125rem 0 0;
     font-size: 1em;
 }
 
@@ -175,7 +191,7 @@ footer {
 .card {
     border: 1px solid #ccc;
     border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
 }
 /* Lightbox overlay */
 .lightbox-overlay {
@@ -202,7 +218,7 @@ footer {
 .lightbox-overlay img {
     max-width: 90%;
     max-height: 90%;
-    transform: translateY(-20px);
+    transform: translateY(-1.25rem);
     transition: transform 0.3s ease;
 }
 
