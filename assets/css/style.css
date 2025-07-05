@@ -91,3 +91,36 @@ footer {
     text-align: center;
     padding: 10px;
 }
+
+/* Lightbox overlay */
+.lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1000;
+}
+
+.lightbox-overlay.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+.lightbox-overlay img {
+    max-width: 90%;
+    max-height: 90%;
+    transform: translateY(-20px);
+    transition: transform 0.3s ease;
+}
+
+.lightbox-overlay.show img {
+    transform: translateY(0);
+}
