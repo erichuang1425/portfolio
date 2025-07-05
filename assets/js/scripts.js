@@ -34,7 +34,17 @@ document.addEventListener('DOMContentLoaded', function () {
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('nav a');
     const header = document.querySelector('header');
+
     const hero = document.querySelector('.hero');
+
+    const navToggle = document.querySelector('.nav-toggle');
+
+    if (navToggle) {
+        navToggle.addEventListener('click', () => {
+            header.classList.toggle('nav-open');
+        });
+    }
+
 
     function setActiveLink() {
         let currentSection = sections[0];
