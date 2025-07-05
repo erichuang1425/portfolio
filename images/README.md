@@ -1,3 +1,4 @@
-This directory should contain image files for the website.
-Place your two garment photos for the "Heritage Threads" project here.
-They should be named `heritage1.jpg` and `heritage2.jpg`.
+Each gallery page reads images from a subfolder named after it. For example,
+`images/garment` holds photos for the garment gallery. After adding images, run
+`node ../generate-manifests.js` from the repository root to refresh the
+`manifest.json` files.
