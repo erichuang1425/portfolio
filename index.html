@@ -26,31 +26,40 @@
 
     <section id="portfolio">
         <h2>Portfolio</h2>
-        <div class="portfolio-section">
-            <h3>Knits</h3>
-            <p>Add photos or descriptions of your knitting projects.</p>
+        <div id="filters">
+            <select id="year-filter">
+                <option value="all">All Years</option>
+                <option value="2023">2023</option>
+                <option value="2022">2022</option>
+            </select>
+            <select id="category-filter">
+                <option value="all">All Media</option>
+                <option value="knits">Knits</option>
+                <option value="prints">Prints</option>
+                <option value="weave">Weave</option>
+                <option value="garment">Garment</option>
+                <option value="embroidery">Embroidery</option>
+            </select>
         </div>
-        <div class="portfolio-section">
-            <h3>Prints</h3>
-            <p>Add photos or descriptions of your print works.</p>
-        </div>
-        <div class="portfolio-section">
-            <h3>Weave</h3>
-            <p>Add photos or descriptions of your weaving projects.</p>
-        </div>
-        <div class="portfolio-section">
-            <h3>Garment</h3>
-            <p>
-                Add photos or descriptions of your garment projects. You can showcase your two garments from the "Heritage Threads" event by placing images named <code>heritage1.jpg</code> and <code>heritage2.jpg</code> in the <code>images</code> folder. They will automatically appear below if added.
-            </p>
-            <div class="heritage-gallery">
-                <img src="images/heritage1.jpg" alt="Heritage Threads garment 1">
-                <img src="images/heritage2.jpg" alt="Heritage Threads garment 2">
+        <div class="gallery">
+            <div class="gallery-item" data-year="2023" data-category="garment">
+                <img data-src="images/heritage1.jpg" alt="Heritage Threads garment 1">
             </div>
-        </div>
-        <div class="portfolio-section">
-            <h3>Embroidery</h3>
-            <p>Add photos or descriptions of your embroidery.</p>
+            <div class="gallery-item" data-year="2023" data-category="garment">
+                <img data-src="images/heritage2.jpg" alt="Heritage Threads garment 2">
+            </div>
+            <div class="gallery-item" data-year="2022" data-category="knits">
+                <img data-src="images/heritage1.jpg" alt="Knit sample">
+            </div>
+            <div class="gallery-item" data-year="2022" data-category="prints">
+                <img data-src="images/heritage2.jpg" alt="Print sample">
+            </div>
+            <div class="gallery-item" data-year="2022" data-category="weave">
+                <img data-src="images/heritage1.jpg" alt="Weave sample">
+            </div>
+            <div class="gallery-item" data-year="2022" data-category="embroidery">
+                <img data-src="images/heritage2.jpg" alt="Embroidery sample">
+            </div>
         </div>
     </section>
 

@@ -44,3 +44,33 @@ footer {
     text-align: center;
     padding: 10px;
 }
+
+
+#filters {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#filters select {
+    margin: 0 5px;
+    padding: 5px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery-item {
+    margin: 10px;
+}
+
+.gallery-item img {
+    max-width: 200px;
+    height: auto;
+}
+
+.hidden {
+    display: none;
+}
