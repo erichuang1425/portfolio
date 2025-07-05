@@ -25,19 +25,19 @@
     </header>
 
 
-    <section id="about" class="fade-in-up">
 
-      <section class="hero">
-          <h2>Welcome</h2>
-          <p>Explore my latest work below.</p>
-      </section>
-  </section>
+    <div class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Write a short bio here. Mention your artistic background, your influences, and what you hope to achieve through your art.</p>
+        </section>
+    </div>
 
-    <section id="about">
-
-        <h2>About Me</h2>
-        <p>Write a short bio here. Mention your artistic background, your influences, and what you hope to achieve through your art.</p>
+    <section class="hero">
+        <h2>Welcome</h2>
+        <p>Explore my latest work below.</p>
     </section>
+
 
     <section id="portfolio" class="fade-in-up">
         <h2>Portfolio</h2>
@@ -61,39 +61,72 @@
             </p>
             <div class="heritage-gallery">
 
-                <div class="card">
-                    <img src="images/heritage1.jpg" alt="Heritage Threads garment 1">
-                </div>
-                <div class="card">
-                    <img src="images/heritage2.jpg" alt="Heritage Threads garment 2">
-                </div>
-            </div>
-            </div>
-            <div class="portfolio-section">
-            <h3>Embroidery</h3>
-            <p>Add photos or descriptions of your embroidery.</p>
-            </div>
-        </div>
-    </section>
 
-    <section id="cv" class="fade-in-up">
-        <h2>CV</h2>
-        <p>Include your CV or a link to a downloadable PDF version here.</p>
-    </section>
+    <div class="container">
+        <section id="portfolio">
+            <h2>Portfolio</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-section">
+                    <h3>Knits</h3>
+                    <p>Add photos or descriptions of your knitting projects.</p>
+                </div>
+                <div class="portfolio-section">
+                    <h3>Prints</h3>
+                    <p>Add photos or descriptions of your print works.</p>
+                </div>
+                <div class="more-items">
+                    <div class="portfolio-section">
+                        <h3>Weave</h3>
+                        <p>Add photos or descriptions of your weaving projects.</p>
+                    </div>
+                    <div class="portfolio-section">
+                        <h3>Garment</h3>
+                        <p>
+                            Add photos or descriptions of your garment projects. You can showcase your two garments from the "Heritage Threads" event by placing images named <code>heritage1.jpg</code> and <code>heritage2.jpg</code> in the <code>images</code> folder. They will automatically appear below if added.
+                        </p>
+                        <div class="heritage-gallery">
+                            <div class="card">
+                                <img src="images/heritage1.jpg" alt="Heritage Threads garment 1">
+                            </div>
+                            <div class="card">
+                                <img src="images/heritage2.jpg" alt="Heritage Threads garment 2">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-section">
+                        <h3>Embroidery</h3>
+                        <p>Add photos or descriptions of your embroidery.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="show-more" type="button">Show More</button>
+        </section>
+    </div>
 
-    <section id="contact" class="fade-in-up">
-        <h2>Contact Me</h2>
-        <form id="contact-form">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-            <button type="submit">Send</button>
-        </form>
-        <div id="form-status"></div>
-    </section>
+
+    <div class="container">
+        <section id="cv">
+            <h2>CV</h2>
+            <p>Include your CV or a link to a downloadable PDF version here.</p>
+        </section>
+    </div>
+
+    <div class="container">
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+            <div id="form-status"></div>
+        </section>
+    </div>
+
 
     <footer>
         <p>&copy; 2023 Your Name. All Rights Reserved.</p>
