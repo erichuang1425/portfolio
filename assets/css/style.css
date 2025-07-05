@@ -9,6 +9,9 @@ header {
     background-color: #f0f0f0;
     padding: 20px;
     text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 nav ul {
@@ -24,6 +27,11 @@ nav li {
 nav a {
     text-decoration: none;
     color: #333;
+}
+
+nav a.active {
+    font-weight: bold;
+    color: #000;
 }
 
 section {
