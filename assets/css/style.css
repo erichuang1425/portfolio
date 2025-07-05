@@ -109,6 +109,15 @@ section:nth-of-type(odd) {
     row-gap: var(--spacing-md);
 }
 
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.more-items {
+    display: none;
+}
+
 .portfolio-section {
     margin: 0;
 }

@@ -50,4 +50,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
     window.addEventListener('scroll', setActiveLink);
     setActiveLink();
+
+    const moreItems = document.querySelector('#portfolio .more-items');
+    const showMoreBtn = document.querySelector('#portfolio .show-more');
+    if (moreItems && showMoreBtn) {
+        showMoreBtn.addEventListener('click', () => {
+            moreItems.style.display = 'contents';
+            showMoreBtn.style.display = 'none';
+        });
+    }
 });
