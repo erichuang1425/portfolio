@@ -6,11 +6,15 @@
 }
 
 body {
-  font-family: 'Outfit', sans-serif;
+  font-family: Arial, sans-serif;
   line-height: 1.6;
-  background-color: #f9f9f9;
-  color: #333;
+  background-color: #fafafa;
+  color: #000;
   margin-left: 240px;
+}
+
+h1, h2, h3 {
+  font-family: Georgia, serif;
 }
 
 .sidebar {
@@ -142,6 +146,24 @@ footer {
 .gallery-grid figcaption {
   margin-top: 0.5rem;
   font-size: 0.9rem;
+}
+
+/* Thin custom scrollbar */
+body::-webkit-scrollbar {
+  width: 6px;
+}
+
+body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 3px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #999;
 }
 
 @media (max-width: 768px) {
