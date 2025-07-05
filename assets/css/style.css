@@ -34,10 +34,29 @@ section {
     margin-bottom: 30px;
 }
 
-.heritage-gallery img {
-    max-width: 200px;
+
+/* Generic portfolio gallery item */
+.gallery-item {
+    display: inline-block;
     margin-right: 10px;
+    text-align: center;
 }
+
+.gallery-item img {
+    display: block;
+    max-width: 200px;
+}
+
+.gallery-item a {
+    text-decoration: none;
+    color: #333;
+}
+
+.gallery-item h4 {
+    margin: 5px 0 0;
+    font-size: 1em;
+}
+
 
 footer {
     background-color: #f0f0f0;
