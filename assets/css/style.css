@@ -34,9 +34,23 @@ section {
     margin-bottom: 30px;
 }
 
-.heritage-gallery img {
-    max-width: 200px;
+.pan-wrapper {
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+    cursor: grab;
+    width: 200px;
     margin-right: 10px;
+}
+
+.pan-wrapper.dragging {
+    cursor: grabbing;
+}
+
+.pan-wrapper img {
+    user-select: none;
+    pointer-events: none;
+    display: block;
 }
 
 footer {
