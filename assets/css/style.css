@@ -10,33 +10,58 @@ body {
   line-height: 1.6;
   background-color: #f9f9f9;
   color: #333;
+  margin-left: 240px;
 }
 
-header {
-  position: sticky;
+.sidebar {
+  position: fixed;
+  left: 0;
   top: 0;
-  background: white;
-  display: flex;
-  justify-content: space-between;
-  padding: 1rem 2rem;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-  z-index: 1000;
+  bottom: 0;
+  width: 240px;
+  padding: 2rem 1rem;
+  overflow-y: auto;
+  background: #fff;
+  border-right: 1px solid #eee;
 }
 
-header .logo {
-  font-weight: bold;
-  font-size: 1.2rem;
-}
-
-nav a {
-  margin-left: 1.5rem;
+.sidebar nav a,
+.sidebar nav summary {
+  display: block;
+  padding: 0.5rem 0;
+  color: #000;
   text-decoration: none;
-  color: #333;
-  transition: color 0.3s;
+  border-bottom: 1px dotted #ccc;
 }
 
-nav a:hover {
-  color: #999;
+.sidebar nav details summary {
+  cursor: pointer;
+  list-style: none;
+}
+
+.sidebar nav .submenu {
+  padding-left: 1rem;
+  margin-top: 0.5rem;
+}
+
+.sidebar nav .submenu a {
+  border: none;
+  font-size: 0.9rem;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 1001;
+}
+
+main {
+  padding: 2rem;
 }
 
 .hero {
@@ -91,4 +116,50 @@ footer {
   padding: 2rem;
   background: #eee;
   font-size: 0.9rem;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem 0;
+}
+
+.gallery-grid figure {
+  text-align: center;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.03);
+}
+
+.gallery-grid figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  body {
+    margin-left: 0;
+  }
+
+  .sidebar {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .menu-toggle {
+    display: block;
+  }
 }
