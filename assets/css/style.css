@@ -27,7 +27,16 @@ nav a {
 }
 
 section {
-    padding: 20px;
+    padding: 40px 20px;
+    margin: 40px 0;
+}
+
+section:nth-of-type(even) {
+    background-color: #f7f7f7;
+}
+
+section:nth-of-type(odd) {
+    background-color: #ffffff;
 }
 
 .portfolio-grid {
