@@ -47,6 +47,28 @@ a:hover {
   border-right: 1px solid var(--sidebar-border);
 }
 
+.sidebar .profile-pic {
+  display: block;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+}
+
+.sidebar-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--sidebar-border);
+  margin-top: 1rem;
+}
+
+.sidebar-icons img {
+  width: 24px;
+  height: 24px;
+}
+
 .sidebar nav a,
 .sidebar nav summary {
   display: block;
@@ -147,7 +169,7 @@ footer {
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
   padding: 1rem 0;
 }
