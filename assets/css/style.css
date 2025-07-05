@@ -5,16 +5,34 @@
   box-sizing: border-box;
 }
 
+:root {
+  --bg-color: #fafafa;
+  --text-color: #333;
+  --sidebar-bg: #fff;
+  --sidebar-border: #eee;
+  --link-color: #333;
+  --link-hover-color: #000;
+  --accent-color: #bb2649;
+}
+
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  background-color: #fafafa;
-  color: #000;
+  background-color: var(--bg-color);
+  color: var(--text-color);
   margin-left: 240px;
 }
 
 h1, h2, h3 {
   font-family: Georgia, serif;
+}
+
+a {
+  color: var(--link-color);
+}
+
+a:hover {
+  color: var(--link-hover-color);
 }
 
 .sidebar {
@@ -25,17 +43,21 @@ h1, h2, h3 {
   width: 240px;
   padding: 2rem 1rem;
   overflow-y: auto;
-  background: #fff;
-  border-right: 1px solid #eee;
+  background: var(--sidebar-bg);
+  border-right: 1px solid var(--sidebar-border);
 }
 
 .sidebar nav a,
 .sidebar nav summary {
   display: block;
   padding: 0.5rem 0;
-  color: #000;
+  color: var(--link-color);
   text-decoration: none;
-  border-bottom: 1px dotted #ccc;
+  border-bottom: 1px dotted var(--sidebar-border);
+}
+
+.sidebar nav a:hover {
+  color: var(--accent-color);
 }
 
 .sidebar nav details summary {
@@ -75,7 +97,7 @@ main {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: url('images/hero.jpg') center/cover no-repeat;
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('../../images/heritage1.png') center/cover no-repeat;
   color: white;
 }
 
@@ -109,7 +131,7 @@ main {
   transform: scale(1.03);
 }
 
-.about, .contact {
+.about, .contact, .cv {
   padding: 3rem 2rem;
   max-width: 700px;
   margin: auto;
@@ -118,7 +140,8 @@ main {
 footer {
   text-align: center;
   padding: 2rem;
-  background: #eee;
+  background: var(--sidebar-bg);
+  border-top: 1px solid var(--sidebar-border);
   font-size: 0.9rem;
 }
 
