@@ -210,3 +210,15 @@ footer {
     transform: translateY(0);
 
 }
+
+.hero {
+    position: relative;
+    height: 60vh;
+    background: url('../images/hero.jpg') center/cover no-repeat fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
