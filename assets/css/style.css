@@ -44,3 +44,33 @@ footer {
     text-align: center;
     padding: 10px;
 }
+
+/* Animation base states */
+.fade-in-on-scroll,
+.slide-up-on-scroll {
+    opacity: 0;
+}
+
+.slide-up-on-scroll {
+    transform: translateY(20px);
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 0.6s forwards ease-out;
+}
+
+/* Slide up animation */
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.slide-up {
+    animation: slideUp 0.6s forwards ease-out;
+}
