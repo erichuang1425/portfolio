@@ -68,6 +68,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
     setActiveLink();
 
+
     const moreItems = document.querySelector('#portfolio .more-items');
     const showMoreBtn = document.querySelector('#portfolio .show-more');
     if (moreItems && showMoreBtn) {
@@ -76,4 +77,17 @@ document.addEventListener('DOMContentLoaded', function () {
             showMoreBtn.style.display = 'none';
         });
     }
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in-up').forEach(section => {
+        observer.observe(section);
+    });
+
 });
