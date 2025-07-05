@@ -44,3 +44,15 @@ footer {
     text-align: center;
     padding: 10px;
 }
+
+.gallery {
+    column-count: 3;
+    column-gap: 10px;
+}
+
+.gallery img {
+    width: 100%;
+    margin-bottom: 10px;
+    display: block;
+}
+
