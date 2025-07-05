@@ -1,11 +1,12 @@
 # Art Portfolio
 
-This repository contains a simple art portfolio website. It includes the following sections:
+This repository contains a simple art portfolio website. It now uses a fixed
+left sidebar for navigation. The menu links are:
 
-- Personal information/About Me
-- Portfolio (knits, prints, weave, garment, embroidery)
-- CV
-- Contact Me form
+- **Gallery** – with subpages for weave, print, embroidery, knit and garment
+- **CV**
+- **About Me** (index.html)
+- **Contact**
 
 ## Adding Images
 
