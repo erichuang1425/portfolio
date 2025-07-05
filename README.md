@@ -10,12 +10,11 @@ left sidebar for navigation. The menu links are:
 
 ## Adding Images
 
-Place any artwork images inside the `images` directory. Two placeholder files are referenced for the "Heritage Threads" garments:
-
-- `images/heritage1.jpg`
-- `images/heritage2.jpg`
-
-Add your actual image files with those names and they will appear automatically in the Garment section.
+Store your artwork in the `images` directory and list each file in the
+corresponding gallery page. Every gallery page defines a small JavaScript array
+named `artworks` describing the images for that section. Update the array with
+new objects containing the file path, title, year, medium and dimensions. The
+page will automatically render all items using `assets/js/gallery.js`.
 
 ## Running Locally
 
