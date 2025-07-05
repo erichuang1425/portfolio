@@ -10,12 +10,15 @@ left sidebar for navigation. The menu links are:
 
 ## Adding Images
 
-Store your artwork in the `images` directory and list each file in the
-corresponding gallery page. Every gallery page defines a small JavaScript array
-named `artworks` describing the images for that section. Update the array with
-new objects containing the file path, title, year, medium and dimensions. The
-page will automatically render all items using `assets/js/gallery.js`.
+Place your artwork in subfolders of the `images` directory. Each folder should
+be named after the gallery page (for example `images/weave` or
+`images/garment`). After adding or removing files, run `node generate-manifests.js`
+to update the `manifest.json` files used by the pages. Every gallery page will
+automatically load all images from its matching folder with
+`assets/js/gallery.js`.
 
 ## Running Locally
 
-No special build steps are required. Simply open `index.html` in a browser to view the site.
+Run `node generate-manifests.js` whenever you add new images so that the
+`manifest.json` files are updated. After that, simply open `index.html` in a
+browser to view the site.
