@@ -24,6 +24,13 @@ nav li {
 nav a {
     text-decoration: none;
     color: #333;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+nav a:hover,
+nav a:focus {
+    transform: scale(1.05);
+    opacity: 0.8;
 }
 
 section {
@@ -37,6 +44,13 @@ section {
 .heritage-gallery img {
     max-width: 200px;
     margin-right: 10px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.heritage-gallery img:hover,
+.heritage-gallery img:focus {
+    transform: scale(1.05);
+    opacity: 0.9;
 }
 
 footer {
