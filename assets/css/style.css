@@ -11,6 +11,14 @@ header {
     text-align: center;
 }
 
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
 nav ul {
     list-style: none;
     padding: 0;
@@ -43,4 +51,50 @@ footer {
     background-color: #f0f0f0;
     text-align: center;
     padding: 10px;
+}
+
+/* Mobile navigation */
+@media (max-width: 768px) {
+    nav.desktop-nav {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .mobile-menu {
+        position: fixed;
+        top: 0;
+        right: -250px;
+        width: 250px;
+        height: 100%;
+        background-color: #fff;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+        transition: right 0.3s ease;
+        padding-top: 60px;
+        z-index: 1000;
+    }
+
+    .mobile-menu.open {
+        right: 0;
+    }
+
+    .mobile-menu ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .mobile-menu li {
+        margin: 20px;
+    }
+
+    .mobile-menu a {
+        display: block;
+        padding: 10px 0;
+        text-decoration: none;
+        color: #333;
+        font-size: 18px;
+    }
 }
