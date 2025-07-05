@@ -50,6 +50,11 @@ nav ul {
     padding: 0;
 }
 
+/* toggle button hidden by default */
+.nav-toggle {
+    display: none;
+}
+
 nav li {
     display: inline-block;
     margin: 0 var(--spacing-unit);
@@ -62,6 +67,29 @@ nav a {
 
 nav a:hover {
     color: var(--accent-color);
+}
+
+/* show/hide nav on small screens */
+@media (max-width: 768px) {
+    nav {
+        display: none;
+    }
+    header.nav-open nav {
+        display: block;
+    }
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
+    nav li {
+        display: block;
+        margin: var(--spacing-unit) 0;
+    }
+    .nav-toggle {
+        display: inline-block;
+        margin-top: var(--spacing-unit);
+    }
 }
 
 h1, h2, h3 {
@@ -183,6 +211,7 @@ footer {
 
 }
 
+
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -200,4 +229,16 @@ footer {
 
 .fade-in-up.animate {
     animation: fadeInUp 0.6s ease forwards;
+}
+.hero {
+    position: relative;
+    height: 60vh;
+    background: url('../images/hero.jpg') center/cover no-repeat fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+
 }

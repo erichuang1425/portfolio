@@ -35,6 +35,17 @@ document.addEventListener('DOMContentLoaded', function () {
     const navLinks = document.querySelectorAll('nav a');
     const header = document.querySelector('header');
 
+    const hero = document.querySelector('.hero');
+
+    const navToggle = document.querySelector('.nav-toggle');
+
+    if (navToggle) {
+        navToggle.addEventListener('click', () => {
+            header.classList.toggle('nav-open');
+        });
+    }
+
+
     function setActiveLink() {
         let currentSection = sections[0];
         sections.forEach((section) => {
@@ -49,6 +60,12 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     window.addEventListener('scroll', setActiveLink);
+    window.addEventListener('scroll', () => {
+        if (hero) {
+            const offset = window.pageYOffset;
+            hero.style.backgroundPositionY = `${offset * 0.5}px`;
+        }
+    });
     setActiveLink();
 
     const observer = new IntersectionObserver((entries) => {
