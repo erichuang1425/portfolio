@@ -50,4 +50,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
     window.addEventListener('scroll', setActiveLink);
     setActiveLink();
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in-up').forEach(section => {
+        observer.observe(section);
+    });
 });
