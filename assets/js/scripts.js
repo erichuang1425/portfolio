@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
         form.reset();
     });
 
+
     // ----- Infinite Scroll Gallery -----
     const gallery = document.getElementById('infinite-gallery');
     const sentinel = document.getElementById('gallery-sentinel');
@@ -49,4 +50,25 @@ document.addEventListener('DOMContentLoaded', function () {
         loadImages();
         observer.observe(sentinel);
     }
+
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('nav a');
+    const header = document.querySelector('header');
+
+    function setActiveLink() {
+        let currentSection = sections[0];
+        sections.forEach((section) => {
+            if (window.scrollY >= section.offsetTop - header.offsetHeight) {
+                currentSection = section;
+            }
+        });
+
+        navLinks.forEach((link) => {
+            link.classList.toggle('active', link.getAttribute('href') === `#${currentSection.id}`);
+        });
+    }
+
+    window.addEventListener('scroll', setActiveLink);
+    setActiveLink();
+
 });
